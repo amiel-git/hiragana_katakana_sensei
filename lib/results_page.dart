@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:hiragana_katakana_sensei/constants.dart';
+import 'package:hiragana_katakana_sensei/exitAlert.dart';
 import 'package:hiragana_katakana_sensei/reusable_card.dart';
 import 'package:hiragana_katakana_sensei/reviewer_page.dart';
 import 'reviewer_brain.dart';
+import 'exitAlert.dart';
 
 
 class ResultsPage extends StatefulWidget {
@@ -74,6 +76,12 @@ class _ResultsPageState extends State<ResultsPage> {
                       ),
                     ),
                     GestureDetector(
+                      onTap: (){
+                        showDialog(
+                          context: context,
+                          builder: (_) => ExitAlert()
+                        );
+                      },
                       child: Container(
                           margin: EdgeInsets.only(left: 30.0,right: 30.0),
                           height: 50,
