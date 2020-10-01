@@ -8,7 +8,6 @@ import 'reviewer_brain.dart';
 
 
 
-
 class ReviewerPage extends StatefulWidget {
   @override
   _ReviewerPageState createState() => _ReviewerPageState();
@@ -30,7 +29,14 @@ class _ReviewerPageState extends State<ReviewerPage> {
     var choice4 = questionItem['choices'][3];
     var correctAnswer = questionItem['answer'];
     var result;
-    return SafeArea(
+    return Scaffold(
+      appBar: AppBar(
+        title: Center(child: Text('Moji Sensei')),
+        backgroundColor: Color(0xFF3F3044),
+      ),
+      backgroundColor: Color(0xFF60446A),
+      body: Center(
+        child: SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
@@ -164,7 +170,7 @@ class _ReviewerPageState extends State<ReviewerPage> {
           )
         ],
       ),
-    );;
-  }
+    )));
+    }
 }
 

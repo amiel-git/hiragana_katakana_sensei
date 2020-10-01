@@ -75,5 +75,12 @@ bool checkAnswer(String answer, String correctAnswer ) {
    }
   }
 
+  void restart() {
+    questionNumber = 1;
+    currentScore = 0;
+    scoreColor = Colors.white;
+    progressValue = 0.0;
+    isComplete = false;
+  }
 }
 
