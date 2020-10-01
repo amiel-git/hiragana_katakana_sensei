@@ -13,12 +13,15 @@ class ReviewerPage extends StatefulWidget {
   @override
   _ReviewerPageState createState() => _ReviewerPageState();
 }
+
 var reviewerBrain = ReviewerBrain();
+
+
 class _ReviewerPageState extends State<ReviewerPage> {
+
   @override
   Widget build(BuildContext context) {
     //Variables
-
     var questionItem = reviewerBrain.generateItem();
     var question = questionItem['question'];
     var choice1 = questionItem['choices'][0];
@@ -59,14 +62,16 @@ class _ReviewerPageState extends State<ReviewerPage> {
                     child: ReusableCard(
                       borderColor: cardBorderColor,
                       onTap: (){
+                        //print('${reviewerBrain.progressValue}');
                         setState(() {
                           reviewerBrain.checkAnswer('$choice1', correctAnswer);
                           //Next question
                           if(reviewerBrain.isComplete == true) {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => ResultsPage()));
-                          } else {
-                            questionItem = ReviewerBrain().generateItem();
+                                MaterialPageRoute(builder: (context) => ResultsPage(
+                                  score: reviewerBrain.currentScore,
+                                  scoreColor: reviewerBrain.scoreColor,
+                                )));
                           }
                         });
                       },
@@ -84,9 +89,10 @@ class _ReviewerPageState extends State<ReviewerPage> {
                             //Next question
                             if(reviewerBrain.isComplete == true) {
                               Navigator.push(context,
-                                  MaterialPageRoute(builder: (context) => ResultsPage()));
-                            } else {
-                              questionItem = ReviewerBrain().generateItem();
+                                  MaterialPageRoute(builder: (context) => ResultsPage(
+                                    score: reviewerBrain.currentScore,
+                                    scoreColor: reviewerBrain.scoreColor,
+                                  )));
                             }
                         });
                         },
@@ -114,9 +120,10 @@ class _ReviewerPageState extends State<ReviewerPage> {
                           //Next question
                           if(reviewerBrain.isComplete == true) {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => ResultsPage()));
-                          } else {
-                            questionItem = ReviewerBrain().generateItem();
+                                MaterialPageRoute(builder: (context) => ResultsPage(
+                                  score: reviewerBrain.currentScore,
+                                  scoreColor: reviewerBrain.scoreColor,
+                                )));
                           }
 
                         });
@@ -135,11 +142,11 @@ class _ReviewerPageState extends State<ReviewerPage> {
                           //Next question
                           if(reviewerBrain.isComplete == true) {
                             Navigator.push(context,
-                                MaterialPageRoute(builder: (context) => ResultsPage()));
-                          } else {
-                            questionItem = ReviewerBrain().generateItem();
+                                MaterialPageRoute(builder: (context) => ResultsPage(
+                                  score: reviewerBrain.currentScore,
+                                  scoreColor: reviewerBrain.scoreColor,
+                                )));
                           }
-
                         });
                       },
                       child: Text('$choice4', style: kChoicesTextStyle),

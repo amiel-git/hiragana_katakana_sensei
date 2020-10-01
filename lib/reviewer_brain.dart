@@ -14,6 +14,7 @@ final int numberOfItems = 20;
 
 var questionNumber = 1;
 var currentScore = 0;
+var scoreColor = Colors.white;
 var progressValue = 0.0;
 var isComplete = false;
 
@@ -39,13 +40,16 @@ var hiragana = HiraganaQuestions().questions;
 }
 
 bool checkAnswer(String answer, String correctAnswer ) {
+
   if(answer.toLowerCase() == correctAnswer.toLowerCase()) {
     questionNumber+=1;
+    updateScoreColor();
     playSound(1);
     currentScore++;
     return true;
   } else {
     playSound(0);
+    updateScoreColor();
     questionNumber+=1;
     return false;
   }
@@ -58,7 +62,17 @@ bool checkAnswer(String answer, String correctAnswer ) {
     } else {
       player.play('wrong.mp3');
     }
+  }
 
+  void updateScoreColor() {
+
+   if(currentScore > 10 && currentScore <=15) {
+     scoreColor = Colors.orange;
+   } else if (currentScore > 15) {
+     scoreColor = Colors.green;
+   } else {
+     scoreColor = Colors.red;
+   }
   }
 
 }

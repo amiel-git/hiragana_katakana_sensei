@@ -20,7 +20,7 @@ class QuizPage extends StatelessWidget {
         ),
         backgroundColor: Color(0xFF60446A),
         body: Center(
-          child: ResultsPage(),
+          child: ReviewerPage(),
         ),
       ),
     );

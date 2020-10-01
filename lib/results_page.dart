@@ -3,6 +3,11 @@ import 'package:hiragana_katakana_sensei/constants.dart';
 import 'package:hiragana_katakana_sensei/reusable_card.dart';
 
 class ResultsPage extends StatelessWidget {
+  final int score;
+  final Color scoreColor;
+
+  ResultsPage({@required this.score,this.scoreColor: Colors.white});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +31,9 @@ class ResultsPage extends StatelessWidget {
                           textAlign: TextAlign.center,
                           style: kResultsTitleTextStyle,),
                         SizedBox(height: 30,),
-                        Text('15/20',textAlign: TextAlign.center, style: kResultsTitleTextStyle,),
+                        Text('$score/20',
+                          textAlign: TextAlign.center,
+                          style:TextStyle(color: scoreColor, fontSize: 50, fontWeight: FontWeight.w300),),
                       ],
                     ),
                   ),
