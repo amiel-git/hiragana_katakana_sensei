@@ -19,7 +19,6 @@ class _ReviewerPageState extends State<ReviewerPage> {
   Widget build(BuildContext context) {
     //Variables
 
-
     var questionItem = reviewerBrain.generateItem();
     var question = questionItem['question'];
     var choice1 = questionItem['choices'][0];
@@ -28,8 +27,6 @@ class _ReviewerPageState extends State<ReviewerPage> {
     var choice4 = questionItem['choices'][3];
     var correctAnswer = questionItem['answer'];
     var result;
-    print(reviewerBrain.questionNumber);
-    print(reviewerBrain.isComplete);
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -60,17 +57,17 @@ class _ReviewerPageState extends State<ReviewerPage> {
                   child: Padding(
                     padding: EdgeInsets.fromLTRB(30.0,0,10.0,0),
                     child: ReusableCard(
+                      borderColor: cardBorderColor,
                       onTap: (){
                         setState(() {
                           reviewerBrain.checkAnswer('$choice1', correctAnswer);
                           //Next question
                           if(reviewerBrain.isComplete == true) {
                             Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => ResultsPage()));
+                                MaterialPageRoute(builder: (context) => ResultsPage()));
                           } else {
                             questionItem = ReviewerBrain().generateItem();
                           }
-
                         });
                       },
                       child: Text('$choice1',style: kChoicesTextStyle),

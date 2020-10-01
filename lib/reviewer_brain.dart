@@ -5,7 +5,7 @@ import 'results_page.dart';
 import 'hiragana_questions.dart';
 import 'question.dart';
 import 'dart:math';
-
+import 'package:audioplayers/audio_cache.dart';
 
 
 class ReviewerBrain {
@@ -41,13 +41,25 @@ var hiragana = HiraganaQuestions().questions;
 bool checkAnswer(String answer, String correctAnswer ) {
   if(answer.toLowerCase() == correctAnswer.toLowerCase()) {
     questionNumber+=1;
+    playSound(1);
     currentScore++;
     return true;
   } else {
+    playSound(0);
     questionNumber+=1;
     return false;
   }
 }
+
+  void playSound(int result) {
+    final player = AudioCache();
+    if(result == 1) {
+      player.play('correct.wav');
+    } else {
+      player.play('wrong.mp3');
+    }
+
+  }
 
 }
 

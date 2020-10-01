@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hiragana_katakana_sensei/results_page.dart';
 import 'reviewer_page.dart';
 void main() {
   runApp(QuizPage());
@@ -19,7 +20,7 @@ class QuizPage extends StatelessWidget {
         ),
         backgroundColor: Color(0xFF60446A),
         body: Center(
-          child: ReviewerPage(),
+          child: ResultsPage(),
         ),
       ),
     );
