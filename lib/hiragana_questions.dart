@@ -58,7 +58,81 @@ class HiraganaQuestions{
     Question(question: 'わ', choices: ['Wa','Yu','Me','Nu'], correctAnswer: 'Wa'),
     Question(question: 'を', choices: ['Mu','Wo','sTa','Sa'], correctAnswer: 'Wo'),
 
-    Question(question: 'ん', choices: ['Re','Yu','U','He'], correctAnswer: 'N'),
+    Question(question: 'ん', choices: ['Re','Yu','U','N'], correctAnswer: 'N'),
+
+    Question(question: 'が', choices: ['Ki','Ka','Ga','Gi'], correctAnswer: 'Ga'),
+    Question(question: 'ぎ', choices: ['Gi','Ki','Za','Sa'], correctAnswer: 'Gi'),
+    Question(question: 'ぐ', choices: ['Gi','Ki','Gu','Ku'], correctAnswer: 'Gu'),
+    Question(question: 'げ', choices: ['Ke','Ge','Se','Ze'], correctAnswer: 'Ge'),
+    Question(question: 'ご', choices: ['Go','Ko','So','Zo'], correctAnswer: 'Go'),
+
+    Question(question: 'ざ', choices: ['Ki','Za','Ga','Gi'], correctAnswer: 'Za'),
+    Question(question: 'じ', choices: ['Gi','Ji','Tsu','Shi'], correctAnswer: 'Ji'),
+    Question(question: 'ず', choices: ['Ta','Ji','Dzu','Zu'], correctAnswer: 'Zu'),
+    Question(question: 'ぜ', choices: ['Ke','Ge','Se','Ze'], correctAnswer: 'Ze'),
+    Question(question: 'ぞ', choices: ['Go','Ro','De','Zo'], correctAnswer: 'Zo'),
+
+    Question(question: 'だ', choices: ['Na','Da','Ta','Ba'], correctAnswer: 'Da'),
+    Question(question: 'ぢ', choices: ['Gi','Ji','Tsu','Shi'], correctAnswer: 'Ji'),
+    Question(question: 'づ', choices: ['Tsu','Ji','Tzu','Bu'], correctAnswer: 'Tzu'),
+    Question(question: 'で', choices: ['Ge','De','Te','Ze'], correctAnswer: 'De'),
+    Question(question: 'ど', choices: ['Go','Ro','Do','Zo'], correctAnswer: 'Do'),
+
+    Question(question: 'ば', choices: ['Bo','Ba','Ha','Ho'], correctAnswer: 'Ba'),
+    Question(question: 'び', choices: ['Mi','Bi','Pi','Ji'], correctAnswer: 'Bi'),
+    Question(question: 'ぶ', choices: ['Da','Bu','Dzu','Fu'], correctAnswer: 'Bu'),
+    Question(question: 'べ', choices: ['Be','He','De','Ze'], correctAnswer: 'Be'),
+    Question(question: 'ぼ', choices: ['Bo','Ba','Ha','Ho'], correctAnswer: 'Bo'),
+
+    Question(question: 'ぱ', choices: ['Bo','Ba','Pa','Ho'], correctAnswer: 'Pa'),
+    Question(question: 'ぴ', choices: ['Mi','Bi','Pi','Ji'], correctAnswer: 'Pi'),
+    Question(question: 'ぷ', choices: ['Pu','Bu','Tzu','Fu'], correctAnswer: 'Pu'),
+    Question(question: 'ぺ', choices: ['Pe','He','De','Be'], correctAnswer: 'Pe'),
+    Question(question: 'ぽ', choices: ['Po','Ba','Bo','Ho'], correctAnswer: 'Po'),
+
+    Question(question: 'きゃ', choices: ['Kya','Gya','Kyu','Gyu'], correctAnswer: 'Kya'),
+    Question(question: 'きゅ', choices: ['Kyu','Kya','Gya','Gyu'], correctAnswer: 'Kyu'),
+    Question(question: 'きょ', choices: ['Kyo','Gyo','Kyu','Kya'], correctAnswer: 'Kyo'),
+
+    Question(question: 'しゃ', choices: ['Sha','Shu','Jyu','Jyo'], correctAnswer: 'Sha'),
+    Question(question: 'しゅ', choices: ['Shu','Sho','Jya','Jyu'], correctAnswer: 'Shu'),
+    Question(question: 'しょ', choices: ['Sho','Sha','Jyu','Jya'], correctAnswer: 'Sho'),
+
+    Question(question: 'ちゃ', choices: ['Cha','Chu','Ryu','Ryo'], correctAnswer: 'Cha'),
+    Question(question: 'ちゅ', choices: ['Chu','Cho','Sha','Shu'], correctAnswer: 'Chu'),
+    Question(question: 'ちょ', choices: ['Cho','Cha','Shu','Sha'], correctAnswer: 'Cho'),
+
+    Question(question: 'にゃ', choices: ['Nya','Gya','Nyu','Gyu'], correctAnswer: 'Nya'),
+    Question(question: 'にゅ', choices: ['Nyu','Kya','Nya','Gyu'], correctAnswer: 'Nyu'),
+    Question(question: 'にょ', choices: ['Nyo','Gyo','Nyu','Kya'], correctAnswer: 'Nyo'),
+
+    Question(question: 'ひゃ', choices: ['Mya','Hya','Hyu','Myu'], correctAnswer: 'Hya'),
+    Question(question: 'ひゅ', choices: ['Myu','Hya','Mya','Hyu'], correctAnswer: 'Hyu'),
+    Question(question: 'ひょ', choices: ['Myo','Hyo','Hyu','Mya'], correctAnswer: 'Hyo'),
+
+    Question(question: 'みゃ', choices: ['Mya','Hya','Hyu','Myu'], correctAnswer: 'Mya'),
+    Question(question: 'みゅ', choices: ['Myu','Hya','Mya','Hyu'], correctAnswer: 'Myu'),
+    Question(question: 'みょ', choices: ['Myo','Hyo','Hyu','Mya'], correctAnswer: 'Myo'),
+
+    Question(question: 'りゃ', choices: ['Rya','Mya','Myu','Ryu'], correctAnswer: 'Rya'),
+    Question(question: 'りゅ', choices: ['Ryu','Mya','Myo','Ryo'], correctAnswer: 'Ryu'),
+    Question(question: 'りょ', choices: ['Ryo','Myo','Ryu','Mya'], correctAnswer: 'Ryo'),
+
+    Question(question: 'ぎゃ', choices: ['Kya','Gya','Kyu','Gyu'], correctAnswer: 'Gya'),
+    Question(question: 'ぎゅ', choices: ['Kyu','Kya','Gya','Gyu'], correctAnswer: 'Gyu'),
+    Question(question: 'ぎょ', choices: ['Kyo','Gyo','Kyu','Kya'], correctAnswer: 'Gyo'),
+
+    Question(question: 'じゃ', choices: ['Sha','Shu','Ja','Jo'], correctAnswer: 'Ja'),
+    Question(question: 'じゅ', choices: ['Shu','Sho','Ja','Ju'], correctAnswer: 'Ju'),
+    Question(question: 'じょ', choices: ['Sho','Sha','Jo','Ja'], correctAnswer: 'Jo'),
+
+    Question(question: 'びゃ', choices: ['Bya','Hya','Hyu','Myu'], correctAnswer: 'Bya'),
+    Question(question: 'びゅ', choices: ['Byu','Bya','Mya','Hyu'], correctAnswer: 'Byu'),
+    Question(question: 'びょ', choices: ['Byo','Hyo','Hyu','Bya'], correctAnswer: 'Byo'),
+
+    Question(question: 'ぴゃ', choices: ['Pya','Hya','Hyu','Myu'], correctAnswer: 'Pya'),
+    Question(question: 'ぴゅ', choices: ['Byu','Bya','Mya','Pyu'], correctAnswer: 'Pyu'),
+    Question(question: 'ぴょ', choices: ['Byo','Pyo','Hyo','Bya'], correctAnswer: 'Pyo'),
 
   ];
 
