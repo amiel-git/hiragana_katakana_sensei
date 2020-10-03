@@ -31,7 +31,7 @@ var hiragana = HiraganaQuestions().questions;
        'choices': ['','','',''],
        'answer': ''};
    } else {
-     var itemNumber = Random().nextInt(5);
+     var itemNumber = Random().nextInt(46);
      progressValue = questionNumber / numberOfItems;
      return {'question': hiragana[itemNumber].question,
        'choices': hiragana[itemNumber].choices,
