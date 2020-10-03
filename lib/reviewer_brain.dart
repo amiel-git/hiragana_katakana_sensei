@@ -6,6 +6,7 @@ import 'hiragana_questions.dart';
 import 'question.dart';
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
+import 'dart:math';
 
 
 class ReviewerBrain {
@@ -34,7 +35,7 @@ var hiragana = HiraganaQuestions().questions;
      var itemNumber = Random().nextInt(46);
      progressValue = questionNumber / numberOfItems;
      return {'question': hiragana[itemNumber].question,
-       'choices': hiragana[itemNumber].choices,
+       'choices': hiragana[itemNumber].choices..shuffle(),
        'answer': hiragana[itemNumber].correctAnswer};
    }
 }
