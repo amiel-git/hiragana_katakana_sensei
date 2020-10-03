@@ -56,7 +56,7 @@ class HiraganaQuestions{
     Question(question: 'ろ', choices: ['Ru','Ro','Fu','Te'], correctAnswer: 'Ro'),
 
     Question(question: 'わ', choices: ['Wa','Yu','Me','Nu'], correctAnswer: 'Wa'),
-    Question(question: 'を', choices: ['Mu','Wo','Ta','Sa'], correctAnswer: 'Wo'),
+    Question(question: 'を', choices: ['Mu','Wo','sTa','Sa'], correctAnswer: 'Wo'),
 
     Question(question: 'ん', choices: ['Re','Yu','U','He'], correctAnswer: 'N'),
 
