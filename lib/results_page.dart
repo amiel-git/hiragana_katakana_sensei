@@ -5,6 +5,7 @@ import 'package:hiragana_katakana_sensei/reusable_card.dart';
 import 'package:hiragana_katakana_sensei/reviewer_page.dart';
 import 'reviewer_brain.dart';
 import 'exitAlert.dart';
+import 'app_button.dart';
 
 
 class ResultsPage extends StatefulWidget {
@@ -56,44 +57,23 @@ class _ResultsPageState extends State<ResultsPage> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
-                    GestureDetector(
-                      onTap: (){
+                    AppButton(
+                      child: Text('Retry'),
+                      onPress: (){
                         setState(() {
                           reviewerBrain.restart();
                           Navigator.popAndPushNamed(context, '/');
-                          });
+                        });
                       },
-                      child: Container(
-                          margin: EdgeInsets.only(left: 30.0,right: 30.0),
-                          height: 50,
-                          decoration: (
-                              BoxDecoration(
-                                  color: cardColor,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  border: Border.all(color: cardBorderColor,width: 1.0))
-                          ),
-                          child: Center(child: Text('Retry'))
-                      ),
                     ),
-                    GestureDetector(
-                      onTap: (){
-                        showDialog(
+                    AppButton(
+                      child: Text('Exit'),
+                      onPress: (){
+                      showDialog(
                           context: context,
                           builder: (_) => ExitAlert()
-                        );
-                      },
-                      child: Container(
-                          margin: EdgeInsets.only(left: 30.0,right: 30.0),
-                          height: 50,
-                          decoration: (
-                              BoxDecoration(
-                                  color: cardColor,
-                                  borderRadius: BorderRadius.circular(10.0),
-                                  border: Border.all(color: cardBorderColor,width: 1.0))
-                          ),
-                          child: Center(child: Text('Exit'))
-                      ),
-                    )
+                      );
+                    },)
                   ],
                 ),
               ),

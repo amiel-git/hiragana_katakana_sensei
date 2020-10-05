@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:hiragana_katakana_sensei/menu_page.dart';
 import 'package:hiragana_katakana_sensei/results_page.dart';
 import 'reviewer_page.dart';
 void main() {
@@ -11,7 +12,8 @@ class QuizPage extends StatelessWidget {
     return MaterialApp(
       initialRoute: '/',
       routes: {
-        '/': (context) =>  ReviewerPage(),
+        '/': (context) =>  MenuPage(),
+        '/reviewer': (context) => ReviewerPage(),
         '/results': (context) => ResultsPage(),
       },
       theme: ThemeData.dark().copyWith(
