@@ -42,9 +42,25 @@ class _ReviewerPageState extends State<ReviewerPage> {
         children: <Widget>[
           Expanded(
             flex: 1,
-            child: Container(
-              padding: EdgeInsets.fromLTRB(0, 10.0, 8.0, 0),
-              child: Text('${reviewerBrain.currentScore}/${reviewerBrain.numberOfItems}',style: kProgressTextStyle,textAlign: TextAlign.right,),
+            child: Padding(
+              padding: const EdgeInsets.only(left:8.0,right: 8.0,top: 5.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  GestureDetector(
+                    onTap: (){
+                      setState(() {
+                        reviewerBrain.restart();
+                      });
+                    },
+                      child: Icon(Icons.refresh)
+                  ),
+                  Container(
+
+                    child: Text('${reviewerBrain.currentScore}/${reviewerBrain.numberOfItems}',style: kProgressTextStyle,textAlign: TextAlign.right,),
+                  ),
+                ],
+              ),
             ),
           ),
           Expanded(

@@ -21,11 +21,14 @@ class MenuPage extends StatelessWidget {
             Column(
               children: <Widget>[
                 AppButton(
-                  child: Text('Hiragana'),
+                  child: Text('Hiragana', style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic)),
+                  onPress: () {
+                    Navigator.pushNamed(context, '/reviewer');
+                  },
                 ),
                 SizedBox(height: 30),
                 AppButton(
-                  child: Text('Katakana'),
+                  child: Text('Katakana',style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic),),
                 )
               ],
             ),
