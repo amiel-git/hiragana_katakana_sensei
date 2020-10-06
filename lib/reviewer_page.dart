@@ -9,17 +9,18 @@ import 'reviewer_brain.dart';
 
 
 class ReviewerPage extends StatefulWidget {
+  final reviewerBrain = ReviewerBrain();
   @override
   _ReviewerPageState createState() => _ReviewerPageState();
 }
 
-var reviewerBrain = ReviewerBrain();
 
 
 class _ReviewerPageState extends State<ReviewerPage> {
 
   @override
   Widget build(BuildContext context) {
+    var reviewerBrain = widget.reviewerBrain;
     //Variables
     var questionItem = reviewerBrain.generateItem();
     var question = questionItem['question'];

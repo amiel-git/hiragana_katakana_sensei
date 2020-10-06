@@ -7,17 +7,17 @@ import 'reviewer_brain.dart';
 import 'exitAlert.dart';
 import 'app_button.dart';
 
-
 class ResultsPage extends StatefulWidget {
   final int score;
   final Color scoreColor;
-
-  ResultsPage({@required this.score,this.scoreColor: Colors.white});
+  final String examType;
+  ResultsPage({@required this.score,this.scoreColor: Colors.white, this.examType});
   @override
   _ResultsPageState createState() => _ResultsPageState();
 }
 
 class _ResultsPageState extends State<ResultsPage> {
+  var reviewerBrain = ReviewerBrain();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,7 +61,6 @@ class _ResultsPageState extends State<ResultsPage> {
                       child: Text('Retry'),
                       onPress: (){
                         setState(() {
-                          reviewerBrain.restart();
                           Navigator.popAndPushNamed(context, '/');
                         });
                       },

@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:hiragana_katakana_sensei/app_button.dart';
+import 'package:hiragana_katakana_sensei/reviewer_page.dart';
 import 'constants.dart';
 import 'package:lottie/lottie.dart';
+import 'reviewer_brain.dart';
 
-class MenuPage extends StatelessWidget {
+class MenuPage extends StatefulWidget {
+  @override
+  _MenuPageState createState() => _MenuPageState();
+}
+
+class _MenuPageState extends State<MenuPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +30,10 @@ class MenuPage extends StatelessWidget {
                 AppButton(
                   child: Text('Hiragana', style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic)),
                   onPress: () {
-                    Navigator.pushNamed(context, '/reviewer');
+                    setState(() {
+                      ReviewerBrain().restart();
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => ReviewerPage()));
+                    });
                   },
                 ),
                 SizedBox(height: 30),
@@ -36,6 +46,6 @@ class MenuPage extends StatelessWidget {
           ],
         ),
       ),
-    );
+    );;
   }
 }
