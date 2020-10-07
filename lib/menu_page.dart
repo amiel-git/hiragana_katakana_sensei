@@ -31,13 +31,22 @@ class _MenuPageState extends State<MenuPage> {
                   child: Text('Hiragana', style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic)),
                   onPress: () {
                     setState(() {
-                      Navigator.push(context,MaterialPageRoute(builder: (context) => ReviewerPage()));
+                      Navigator.push(context,MaterialPageRoute(builder: (context) => ReviewerPage(
+                        type: examType.hiragana,
+                      )));
                     });
                   },
                 ),
                 SizedBox(height: 30),
                 AppButton(
                   child: Text('Katakana',style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic),),
+                  onPress: () {
+                    setState(() {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => ReviewerPage(
+                        type: examType.katakana,
+                      )));
+                    });
+                  },
                 )
               ],
             ),

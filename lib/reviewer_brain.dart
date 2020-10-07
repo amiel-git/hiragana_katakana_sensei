@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:hiragana_katakana_sensei/katakana_questions.dart';
 import 'package:hiragana_katakana_sensei/results_page.dart';
 import 'results_page.dart';
 import 'hiragana_questions.dart';
@@ -7,11 +8,20 @@ import 'question.dart';
 import 'dart:math';
 import 'package:audioplayers/audio_cache.dart';
 import 'dart:math';
+import 'katakana_questions.dart';
 
 
+enum examType {
+  hiragana,
+  katakana
+}
 class ReviewerBrain {
 
+  //Constructors
 final int numberOfItems = 20;
+final type;
+ReviewerBrain({this.type});
+
 
 var questionNumber = 1;
 var currentScore = 0;
@@ -19,10 +29,18 @@ var scoreColor = Colors.white;
 var progressValue = 0.0;
 var isComplete = false;
 
+var questions;
 var hiragana = HiraganaQuestions().questions;
-//TODO: Add Katakana
+var katakana = KatakanaQuestions().questions;
 
- Map generateItem(){
+
+ Map generateItem(type){
+
+  if(type == examType.hiragana) {
+    questions = hiragana;
+  } else {
+    questions = katakana;
+  }
    if (questionNumber == 20) {
      isComplete = true;
    }
@@ -34,9 +52,9 @@ var hiragana = HiraganaQuestions().questions;
    } else {
      var itemNumber = Random().nextInt(46);
      progressValue = questionNumber / numberOfItems;
-     return {'question': hiragana[itemNumber].question,
-       'choices': hiragana[itemNumber].choices..shuffle(),
-       'answer': hiragana[itemNumber].correctAnswer};
+     return {'question': questions[itemNumber].question,
+       'choices': questions[itemNumber].choices..shuffle(),
+       'answer': questions[itemNumber].correctAnswer};
    }
 }
 
@@ -83,5 +101,6 @@ bool checkAnswer(String answer, String correctAnswer ) {
     progressValue = 0.0;
     isComplete = false;
   }
+
 }
 

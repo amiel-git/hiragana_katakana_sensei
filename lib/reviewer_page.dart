@@ -9,20 +9,22 @@ import 'reviewer_brain.dart';
 
 
 class ReviewerPage extends StatefulWidget {
-  final reviewerBrain = ReviewerBrain();
+  final examType type;
+
+  ReviewerPage({this.type});
+
+
   @override
   _ReviewerPageState createState() => _ReviewerPageState();
 }
 
-
-
 class _ReviewerPageState extends State<ReviewerPage> {
-
+  var reviewerBrain = ReviewerBrain();
   @override
   Widget build(BuildContext context) {
-    var reviewerBrain = widget.reviewerBrain;
+
     //Variables
-    var questionItem = reviewerBrain.generateItem();
+    var questionItem = reviewerBrain.generateItem(widget.type);
     var question = questionItem['question'];
     var choice1 = questionItem['choices'][0];
     var choice2 = questionItem['choices'][1];
