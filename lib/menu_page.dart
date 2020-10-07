@@ -31,7 +31,6 @@ class _MenuPageState extends State<MenuPage> {
                   child: Text('Hiragana', style: TextStyle(fontSize: 18, letterSpacing: 1.2,fontStyle: FontStyle.italic)),
                   onPress: () {
                     setState(() {
-                      ReviewerBrain().restart();
                       Navigator.push(context,MaterialPageRoute(builder: (context) => ReviewerPage()));
                     });
                   },
